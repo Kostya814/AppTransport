@@ -2,8 +2,67 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" Width="800" Height="450"
+        xmlns:models="clr-namespace:AppTransport.Models"
+        mc:Ignorable="d" Width="1200" Height="600"
         x:Class="AppTransport.MainWindow"
         Title="AppTransport">
-    Welcome to Avalonia!
+    <Window.Background>
+        <LinearGradientBrush>
+            <GradientStop Offset="0" Color="#ec008c"/>
+            <GradientStop Offset="1.0" Color="#27496D"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <StackPanel
+        Orientation="Vertical">
+        <StackPanel 
+            Margin="0,10,0,0"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+                    >
+            <Button
+                Margin="10,0,0,0"
+                Content="adadsdasd"/>
+            <Button 
+                Margin="10,0,0,0"
+                Content="adadsdasd"/>
+            <Button 
+                Margin="10,0,0,0"
+                Content="adadsdasd"/>
+            <Button 
+                Margin="10,0,0,0"
+                Content="adadsdasd"/>
+            <Button 
+                Margin="10,0,0,0"
+                Content="adadsdasd"/>
+        </StackPanel>
+        <DataGrid
+            Margin="10"
+            AutoGenerateColumns="False"
+            GridLinesVisibility="All"
+            BorderBrush="Black"
+            Name="DgOrders"
+            x:DataType="models:Order">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="Работник" 
+                    Binding="{Binding Worker.DisplayInfo}"/>
+                <DataGridTextColumn 
+                    Header="Машина"
+                    Binding="{Binding Car.DisplayInfo}"/>
+                <DataGridTextColumn 
+                    Header="Адрес доставки"
+                    Binding="{Binding AddressLocated.DisplayInfo}"/>
+                <DataGridTextColumn 
+                    Header="Дата доставки"
+                    Binding="{Binding DateArrivals}"/>
+                <DataGridTextColumn 
+                    Header="Цена"
+                    Binding="{Binding Price}"/>
+                <DataGridTextColumn 
+                    Header="Клиент"
+                    Binding="{Binding ClientId.DisplayInfo}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
 </Window>

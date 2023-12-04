@@ -129,3 +129,6 @@ C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\obj\Debug\net7.0\AppTran
 C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\obj\Debug\net7.0\AppTransport.csproj.CopyComplete
 C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\obj\Debug\net7.0\AppTransport.genruntimeconfig.cache
 C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\obj\Debug\net7.0\ref\AppTransport.dll
+C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\bin\Debug\net7.0\MySqlConnector.dll
+C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\obj\Debug\net7.0\AppTransport.sourcelink.json
