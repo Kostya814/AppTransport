@@ -17,6 +17,9 @@ build_property.ProjectDir = C:\Users\Kostya\RiderProjects\AppTransport\AppTransp
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
+[C:/Users/Kostya/RiderProjects/AppTransport/AppTransport/AddOrder.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Kostya/RiderProjects/AppTransport/AppTransport/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

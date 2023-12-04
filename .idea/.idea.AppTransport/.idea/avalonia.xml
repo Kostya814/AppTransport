@@ -3,6 +3,7 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="AppTransport/AddOrder.axaml" value="AppTransport/AppTransport.csproj" />
         <entry key="AppTransport/App.axaml" value="AppTransport/AppTransport.csproj" />
         <entry key="AppTransport/MainWindow.axaml" value="AppTransport/AppTransport.csproj" />
       </map>

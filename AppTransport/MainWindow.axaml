@@ -3,7 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:models="clr-namespace:AppTransport.Models"
-        mc:Ignorable="d" Width="1200" Height="600"
+        mc:Ignorable="d" Width="1300" Height="600" CanResize="False"
         x:Class="AppTransport.MainWindow"
         Title="AppTransport">
     <Window.Background>
@@ -18,23 +18,27 @@
             Margin="0,10,0,0"
             Orientation="Horizontal"
             HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-                    >
+            VerticalAlignment="Top">
             <Button
                 Margin="10,0,0,0"
-                Content="adadsdasd"/>
+                Content="Добавить Заказ"/>
             <Button 
                 Margin="10,0,0,0"
-                Content="adadsdasd"/>
+                Content="Добавить Клиента"/>
             <Button 
                 Margin="10,0,0,0"
-                Content="adadsdasd"/>
+                Content="Добавить Работника"/>
             <Button 
                 Margin="10,0,0,0"
-                Content="adadsdasd"/>
+                Content="Добавить "/>
             <Button 
                 Margin="10,0,0,0"
-                Content="adadsdasd"/>
+                Content="Добавить"/>
+            <TextBlock 
+                VerticalAlignment="Center"
+                Margin="10,0,0,0"
+                Name="TbPrice"
+                Text="Кол-во заказов на цену более 2000:"/>
         </StackPanel>
         <DataGrid
             Margin="10"
@@ -62,6 +66,25 @@
                 <DataGridTextColumn 
                     Header="Клиент"
                     Binding="{Binding ClientId.DisplayInfo}"/>
+                <DataGridTemplateColumn>
+                    <DataTemplate>
+                        <StackPanel
+                            Orientation="Horizontal"
+                            Margin="5">
+                            <Button 
+                                Content="Удалить"
+                                Background="Red"
+                                Click="DeleteOrder">
+                            </Button>
+                            <Button
+                                Margin="10,0,0,0"
+                                Content="Изменить"
+                                Background="Silver"
+                                Click="ChangeOrder">
+                            </Button>
+                        </StackPanel>
+                    </DataTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
     </StackPanel>

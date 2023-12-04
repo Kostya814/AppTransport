@@ -12,6 +12,12 @@ public class Order
     private double _price;
     private Clients _clientID;
 
+    public Order()
+    {
+        
+    }
+    
+
     public Order(int id, Workers worker, Cars car, Address addressLocated, DateTime dateArrivals, double price, Clients clientId)
     {
         _id = id;

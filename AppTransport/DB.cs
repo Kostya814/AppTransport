@@ -312,4 +312,66 @@ public class DB
         return orders;
     }
 
+    public void DeleteOrderById(int id)
+    {
+        using (var conn = new MySqlConnection(_connectionString.ConnectionString))
+        {
+            conn.Open();
+            using (var cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "DELETE FROM order WHERE ID = @id ";
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+
+            }
+            conn.Close();
+        }
+    }
+    public void UpdateOrderById(Order order)
+    {
+        using (var conn = new MySqlConnection(_connectionString.ConnectionString))
+        {
+            conn.Open();
+            using (var cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "UPDATE orders SET Worker = @WorkerID, " +
+                                  "Car = @CarID, " +
+                                  "Addresslocated = @AddressID," +
+                                  "DateArrivals = @Date, " +
+                                  "Price = @price, " +
+                                  "CLientID = @ClientID " +
+                                  "Where Id = @id ";
+                cmd.Parameters.AddWithValue("@id", order.Id);
+                cmd.Parameters.AddWithValue("@WorkerID", order.Worker.Id);
+                cmd.Parameters.AddWithValue("@CarID", order.Car.Id);
+                cmd.Parameters.AddWithValue("@AddressID", order.AddressLocated.Id);
+                cmd.Parameters.AddWithValue("@Date", order.DateArrivals);
+                cmd.Parameters.AddWithValue("@price", order.Price);
+                cmd.Parameters.AddWithValue("@ClientID", order.ClientId.Id);
+                var i = cmd.ExecuteNonQuery();
+            }
+            conn.Close();
+        }
+    }
+    public void InsertOrderById(Order order)
+    {
+        using (var conn = new MySqlConnection(_connectionString.ConnectionString))
+        {
+            conn.Open();
+            using (var cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "INSERT INTO orders (Worker, Car, Addresslocated, DateArrivals, price, ClientID) " +
+                                  "VALUES (@Worker, @Car, @Addresslocated, @DateArrivals, @price, @ClientID)";
+                cmd.Parameters.AddWithValue("@Worker", order.Worker.Id);
+                cmd.Parameters.AddWithValue("@Car", order.Car.Id);
+                cmd.Parameters.AddWithValue("@Addresslocated", order.AddressLocated.Id);
+                cmd.Parameters.AddWithValue("@DateArrivals", order.DateArrivals);
+                cmd.Parameters.AddWithValue("@price", order.Price);
+                cmd.Parameters.AddWithValue("@ClientID", order.ClientId.Id);
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
+        }
+    }
+
 }

@@ -1,0 +1,123 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:AppTransport.Models"
+        mc:Ignorable="d" Width="500" Height="350"
+        x:Class="AppTransport.AddOrder"
+        Title="AddOrder"
+        x:DataType="models:Order">
+        <Window.Background>
+                <LinearGradientBrush>
+                        <GradientStop Offset="0" Color="#ec008c"/>
+                        <GradientStop Offset="1.0" Color="#27496D"/>
+                </LinearGradientBrush>
+        </Window.Background>
+        <StackPanel
+                Orientation="Vertical">
+                <StackPanel 
+                        Orientation="Horizontal"
+                        Margin="10"
+                        HorizontalAlignment="Center">
+                        <TextBlock 
+                                VerticalAlignment="Center"
+                                Text="Выберите работника"/>
+                        <ComboBox
+                                Name="CbWorker"
+                                Margin="10,0,0,0">
+                                <ComboBox.DataTemplates>
+                                        <DataTemplate x:DataType="models:Workers">
+                                                <TextBlock Text="{Binding DisplayInfo}"/>
+                                        </DataTemplate>
+                                </ComboBox.DataTemplates>
+                        </ComboBox>
+                </StackPanel>
+                <StackPanel
+                        Orientation="Horizontal"
+                        Margin="10"
+                        HorizontalAlignment="Center">
+                        <TextBlock 
+                                VerticalAlignment="Center"
+                                Text="Выберите машину"/>
+                        <ComboBox
+
+                                Name="CbCar"
+                                Margin="10,0,0,0">
+                                <ComboBox.DataTemplates>
+                                        <DataTemplate x:DataType="models:Cars">
+                                                <TextBlock Text="{Binding DisplayInfo}"/>
+                                        </DataTemplate>
+                                </ComboBox.DataTemplates>
+                        </ComboBox>
+                </StackPanel>
+                <StackPanel
+                        Orientation="Horizontal"
+                        Margin="10"
+                        HorizontalAlignment="Center">
+                        <TextBlock 
+                                VerticalAlignment="Center"
+                                Text="Выберите клиента"/>
+                        <ComboBox
+                                Name="CbClient"
+                                Margin="10,0,0,0">
+                                <ComboBox.DataTemplates>
+                                        <DataTemplate x:DataType="models:Clients">
+                                                <TextBlock Text="{Binding DisplayInfo}"/>
+                                        </DataTemplate>
+                                </ComboBox.DataTemplates>
+                        </ComboBox>
+                </StackPanel>
+                <StackPanel
+                        Orientation="Horizontal"
+                        Margin="10"
+                        HorizontalAlignment="Center">
+                        <TextBlock 
+                                VerticalAlignment="Center"
+                                Text="Адрес заказа"/>
+                        <ComboBox
+                                Name="CbAddress"
+                                Margin="10,0,0,0">
+                                <ComboBox.DataTemplates>
+                                        <DataTemplate x:DataType="models:Address">
+                                                <TextBlock Text="{Binding DisplayInfo}"/>
+                                        </DataTemplate>
+                                </ComboBox.DataTemplates>
+                        </ComboBox>
+                </StackPanel>
+                <StackPanel
+                        Orientation="Horizontal"
+                        Margin="10"
+                        HorizontalAlignment="Center">
+                        <TextBlock 
+                                VerticalAlignment="Center"
+                                Text="Дата заказа"/>
+                        <DatePicker
+                                Name="DpDate"
+                                Margin="10,0,0,0"/>
+                </StackPanel>
+                <StackPanel
+                        Orientation="Horizontal"
+                        Margin="10"
+                        HorizontalAlignment="Center">
+                        <TextBlock 
+                                VerticalAlignment="Center"
+                                Text="Цена заказа"/>
+                        <TextBox
+                                Name="TbPrice"
+                                Margin="10,0,0,0"/>
+                </StackPanel>
+                <StackPanel
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                        <Button
+                                Click="InsertAndUpdate"
+                                Content="Сохранить">
+                        </Button>
+                        <Button
+                                Margin="10,0,0,0"
+                                Click="Cancel"
+                                Content="Отменить">
+                        </Button>
+                </StackPanel>
+        </StackPanel>
+</Window>

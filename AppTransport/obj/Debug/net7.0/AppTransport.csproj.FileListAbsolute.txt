@@ -132,3 +132,8 @@ C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\obj\Debug\net7.0\ref\App
 C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\bin\Debug\net7.0\MySqlConnector.dll
 C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\obj\Debug\net7.0\AppTransport.sourcelink.json
+C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\bin\Debug\net7.0\ColorTextBlock.Avalonia.dll
+C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\bin\Debug\net7.0\DialogHost.Avalonia.dll
+C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\bin\Debug\net7.0\Markdown.Avalonia.dll
+C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\bin\Debug\net7.0\MsBox.Avalonia.dll
+C:\Users\Kostya\RiderProjects\AppTransport\AppTransport\bin\Debug\net7.0\System.Reactive.dll
